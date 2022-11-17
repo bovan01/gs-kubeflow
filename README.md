@@ -1,6 +1,6 @@
-# Custom Catalogue Applications
+# Custom Catalog Applications
 
-Your custom catalogue has been built and is ready to deploy to DKP. Set the relevant namespace for either workspace or project, depending on the scope you chose, as an environmental variable:
+Your custom catalog has been built and is ready to deploy to DKP. Set the relevant namespace for either workspace or project, depending on the scope you chose, as an environmental variable:
 
 ```bash
 export NAMESPACE=[your_namespace]
@@ -13,16 +13,16 @@ kubectl apply -f - <<EOF
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: kubby-time
+  name: kubeflow
   namespace: ${NAMESPACE}
   labels:
     kommander.d2iq.io/gitapps-gitrepository-type: catalog
     kommander.d2iq.io/gitrepository-type: catalog
 spec:
-  interval: 1m0s
+  interval: 5s
   ref:
     branch: master
   timeout: 20s
-  url: https://github.com/bovan01/kubby-time
+  url: https://github.com/bovan01/gs-kubeflow
 EOF
 ```
