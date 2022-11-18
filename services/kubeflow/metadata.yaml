@@ -1,7 +1,7 @@
 displayName: kubeflow
 description: Kubeflow is a free and open-source platform for machine learning on Kubernetes.
 category:
-  - My Applications
+  - Data Science
 type: catalog
 scope:
   - workspace
