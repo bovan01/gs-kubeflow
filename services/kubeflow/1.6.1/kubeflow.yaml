@@ -1,4 +1,16 @@
 ---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: kubeflow
+  namespace: miramar
+spec:
+  interval: 5s
+  ref:
+    tags: 1.6.1
+  timeout: 20s
+  url: https://github.com/kubeflow/manifests
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
