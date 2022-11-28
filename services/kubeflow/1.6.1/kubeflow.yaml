@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: kubeflow
-  namespace: miramar
+  namespace: ${releaseNamespace}
 spec:
   interval: 5s
   ref:
