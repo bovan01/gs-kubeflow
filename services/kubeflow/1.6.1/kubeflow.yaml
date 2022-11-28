@@ -8,7 +8,7 @@ spec:
   interval: 1m0s
   ref:
     tag: v1.6.1
-  timeout: 1m0s
+  timeout: 15m0s
   url: https://github.com/kubeflow/manifests
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
