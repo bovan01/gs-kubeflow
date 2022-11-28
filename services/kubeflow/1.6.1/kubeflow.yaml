@@ -34,6 +34,7 @@ spec:
       kind: ConfigMap
       name: default-install-config.*
   interval: 6h
+  timeout: 15m0s
   path: ./example
   prune: true
   serviceAccountName: ${releaseNamespace}
