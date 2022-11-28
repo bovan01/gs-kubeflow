@@ -19,10 +19,10 @@ metadata:
     kommander.d2iq.io/gitapps-gitrepository-type: catalog
     kommander.d2iq.io/gitrepository-type: catalog
 spec:
-  interval: 5s
+  interval: 1m0s
   ref:
     branch: master
-  timeout: 20s
+  timeout: 1m0s
   url: https://github.com/bovan01/gs-kubeflow
 EOF
 ```
