@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: kubeflow
+  name: kubeflow-instance
   namespace: ${releaseNamespace}
 spec:
   interval: 1m0s
@@ -14,7 +14,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: kubeflow
+  name: kubeflow-instance
   namespace: ${releaseNamespace}
 spec:
   patches:
@@ -40,5 +40,5 @@ spec:
   serviceAccountName: ${releaseNamespace}
   sourceRef:
    kind: GitRepository
-   name: kubeflow
+   name: kubeflow-instance
    namespace: ${releaseNamespace}
