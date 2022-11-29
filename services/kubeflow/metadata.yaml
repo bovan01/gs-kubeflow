@@ -3,6 +3,7 @@ description: Kubeflow is a free and open-source platform for machine learning on
 category:
   - Data Science
 type: catalog
+allowMultipleInstances: false
 scope:
   - project
 overview: |-
